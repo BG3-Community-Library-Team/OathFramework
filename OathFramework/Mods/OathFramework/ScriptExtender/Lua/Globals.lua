@@ -15,26 +15,12 @@ clImports[2] = "Utils"
 CLGlobals, CLUtils = Mods.CommunityLibrary.Import(clImports)
 
 -- We're going to handle Clerics and Warlocks eventually. For now, we'll just do Paladins
-Globals.PaladinTags = {
-  {
-    Tag = "",
-    Events = {
-      {
-        ListenEvent = "FlagSet",
-        Params = { -- we'll pass this in _and_ use it to calculate arity
-          FlagId = ""
-        },
-        Conditions = {},
-        EventType = "Break/Redeem"
-      }
-    }
-  }
-}
+Globals.PaladinTags = {}
 
-Globals.ClericTags = {}
-Globals.WarlockTags = {}
+-- Globals.ClericEvents = {}
+-- Globals.WarlockEvents = {}
 
-Globals.EventType = {
-  Break = "Break",
-  Redeem = "Redeem"
+Globals.EventFnType = {
+  Break = "BreakOath",
+  Redeem = "RedeemOath"
 }
