@@ -8,7 +8,8 @@ local function ConvertToPayload(data, modGUID)
       payload[tagData.SubclassTag] = {
         modGuids = tagData.modGuids or { modGUID },
         OathbreakerTag = tagData.OathbreakerTag,
-        SubclassOathBrokenEventFlag = tagData.SubclassOathBrokenEventFlag
+        SubclassOathBrokenEventFlag = tagData.SubclassOathBrokenEventFlag,
+        CrimesToReact = tagData.CrimesToReact or {}
       }
     end
   end
