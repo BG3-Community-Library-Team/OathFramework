@@ -1,3 +1,5 @@
+_D("ENTERED OATH FRAMEWORK BOOTSTRAP")
+
 Ext.Require("Globals.lua")
 Ext.Require("Strings.lua")
 Ext.Require("Utils/_init.lua")
@@ -5,4 +7,5 @@ Ext.Require("Conditions/_init.lua")
 Ext.Require("Actions/_init.lua")
 Ext.Require("Listeners/_init.lua")
 Ext.Require("Api/_init.lua")
+_D("Loading JSON Loader for Oath Framework")
 Ext.Require("JsonLoader.lua")

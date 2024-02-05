@@ -1,16 +1,16 @@
-local configFilePathPattern = string.gsub("Mods/%s/ScriptExtender/OathrameworkConfig.json", "'", "\'")
+local configFilePathPattern = string.gsub("Mods/%s/ScriptExtender/OathFrameworkConfig.json", "'", "\'")
 
 local function ConvertToPayload(data, modGUID)
   CLUtils.Info("Entering ConvertToPayload", Globals.InfoOverride)
-  local payload = {
-    TagData = {}
-  }
-  for _, tagData in pairs(data.Tags) do
-    payload.TagData[tagData.SubclassTag] = {
-      modGuids = tagData.modGuids or { modGUID },
-      OathbreakerTag = tagData.OathbreakerTag,
-      SubclassOathBrokenEventFlag = tagData.SubclassOathBrokenEventFlag
-    }
+  local payload = {}
+  for _, tagDataBase in pairs(data.Tags) do
+    for _, tagData in pairs(tagDataBase.OathbreakerSubclassData) do
+      payload[tagData.SubclassTag] = {
+        modGuids = tagData.modGuids or { modGUID },
+        OathbreakerTag = tagData.OathbreakerTag,
+        SubclassOathBrokenEventFlag = tagData.SubclassOathBrokenEventFlag
+      }
+    end
   end
 
   return payload

@@ -3,7 +3,7 @@
 function Api.RegisterSubclassTags(payload)
   CLUtils.Info("Entering Api.RegisterSubclassTags", Globals.InfoOverride)
 
-  for subclassTag, tagData in pairs(payload.TagData) do
+  for subclassTag, tagData in pairs(payload) do
     local found, missingMods = Conditions.IsAllModsLoaded(tagData.modGuids)
 
     if found then

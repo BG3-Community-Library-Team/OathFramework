@@ -1,0 +1,14 @@
+{
+  "FileVersion": 1,
+  "Tags": [
+    {
+      "OathbreakerSubclassData": [
+        {
+          "SubclassTag": "PALADIN_WATCHERS_bb55a02e-bc43-4229-abe1-7d3d20093225",
+          "OathbreakerTag": "OATHBREAKER_WATCHERS_4e92ba51-82fa-4bbb-b34e-da5e68f3040d",
+          "SubclassOathBrokenEventFlag": "GLO_PaladinOathbreaker_Event_WatchersBrokeOath_c6bb3fca-aa4d-441c-95e5-3eb18b825c55"
+        }
+      ]
+    }
+  ]
+}

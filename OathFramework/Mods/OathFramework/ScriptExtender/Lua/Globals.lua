@@ -20,7 +20,3 @@ Globals.PaladinTags = {}
 -- Globals.ClericEvents = {}
 -- Globals.WarlockEvents = {}
 
-Globals.EventFnType = {
-  Break = "BreakOath",
-  Redeem = "RedeemOath"
-}
