@@ -11,6 +11,9 @@ function Api.RegisterSubclassTags(payload)
         OathbreakerTag = tagData.OathbreakerTag,
         OathBrokenEventFlag = tagData.SubclassOathBrokenEventFlag
       }
+
+      Osi.DB_GLO_PaladinOathbreaker_SubclassTags(subclassTag, tagData.OathbreakerTag)
+      Osi.DB_GLO_PaladinOathbreaker_SubclassOathBrokenFlags(tagData.SubclassOathBrokenEventFlag, subclassTag)
     else
       CLUtils.Warn(Strings.WARN_MODS_NOT_FOUND .. table.concat(missingMods, ", "))
     end
