@@ -3,15 +3,22 @@ local configFilePathPattern = string.gsub("Mods/%s/ScriptExtender/OathrameworkCo
 local function ConvertToPayload(data, modGUID)
   CLUtils.Info("Entering ConvertToPayload", Globals.InfoOverride)
   local payload = {
-    modGuid = modGUID,
+    TagData = {}
   }
+  for _, tagData in pairs(data.Tags) do
+    payload.TagData[tagData.SubclassTag] = {
+      modGuids = tagData.modGuids or { modGUID },
+      OathbreakerTag = tagData.OathbreakerTag,
+      SubclassOathBrokenEventFlag = tagData.SubclassOathBrokenEventFlag
+    }
+  end
 
   return payload
 end
 
 local function SubmitData(data, modGUID)
   CLUtils.Info("Entering SubmitData", Globals.InfoOverride)
-  -- SendToAPI(ConvertToPayload(data, modGUID))
+  Api.RegisterSubclassTags(ConvertToPayload(data, modGUID))
 end
 
 ---@param configStr string

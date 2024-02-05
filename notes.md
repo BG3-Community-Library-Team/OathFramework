@@ -97,3 +97,19 @@ DB_GLO_PaladinOathbreaker_SubclassTags(PALADIN_ANCIENTS_7c89622b-4194-41df-b2ff-
 DB_GLO_PaladinOathbreaker_SubclassTags(PALADIN_DEVOTION_2de0a4fc-5831-4439-94d3-a7ff9b7aacf6, OATHBREAKER_DEVOTION_d274b482-4add-4f36-a0a4-a94740f6630e);
 
 ```
+
+
+```sql
+IF
+FlagSet(GLO_PaladinOathbreaker_Event_BrokeOath_0246da96-5ef8-4c65-9f0d-c2856bd17674, (CHARACTER)_Var1, (INTEGER)_Var2)
+AND
+IsTagged(_Var1, PALADIN_6d85ab2d-5c23-498c-a61e-98f05a00177a, 1)
+THEN
+PROC_GLO_PaladinOathbreaker_BrokeOath(_Var1, _Var2);
+```
+
+
+`PROC_GLO_PaladinOathbreaker_RedemptionObtained()` - Redeems you - respec ui
+
+`FlagSet(GLO_PaladinOathbreaker_State_AboutToBecomeOathbreaker_3ad5db08-0191-4308-b127-ad1cdc6f8718, (CHARACTER)_Var1, _)`
+or `PROC_ORI_SetupCamp(S_GLO_OathbreakerKnight_3939625d-86cc-4395-9d50-4f8b846c4231);` - Needed for Oathbreaker Knight to come to camp

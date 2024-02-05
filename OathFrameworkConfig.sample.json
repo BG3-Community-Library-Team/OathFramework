@@ -1,8 +1,15 @@
 {
   "FileVersion": 1,
-  "Subclasses": [
+  "Tags": [
     {
-      "modGuids": {}
+      "modGuids": [""],
+      "OathbreakerSubclassData": [
+        {
+          "SubclassTag": "PALADIN_ANCIENTS_7c89622b-4194-41df-b2ff-145a5056ee49",
+          "OathbreakerTag": "OATHBREAKER_ANCIENTS_d84a8a0b-b648-464c-9bd5-1ed9b965da2a",
+          "SubclassOathBrokenEventFlag": "GLO_PaladinOathbreaker_Event_AncientsBrokeOath_7cf0bd9c-f089-45a3-88fb-03087d3d8b95"
+        }
+      ]
     }
   ]
 }

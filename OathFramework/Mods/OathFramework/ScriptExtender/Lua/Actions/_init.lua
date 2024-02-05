@@ -1,4 +1,4 @@
 Actions = {}
 
-Ext.Require("Actions/BreakOath.lua")
-Ext.Require("Actions/RedeemOath.lua")
+Ext.Require("Actions/Break.lua")
+Ext.Require("Actions/Redeem.lua")
