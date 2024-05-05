@@ -1,4 +1,5 @@
 function Conditions.IsAllModsLoaded(modGuids)
+  CLUtils.Info("Entering Conditions.IsAllModsLoaded with the following guids: " .. table.concat(modGuids, ", "), Globals.InfoOverride)
   local res = true
   local missingMods = {}
   for _, uuid in pairs(modGuids) do

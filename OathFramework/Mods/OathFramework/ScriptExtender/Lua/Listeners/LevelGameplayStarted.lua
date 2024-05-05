@@ -2,8 +2,6 @@ Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function (_, _)
   CLUtils.Info("Entering LevelGameplayStarted Listener", Globals.InfoOverride)
   for tagName, tagData in pairs(Globals.PaladinTags) do
     -- Register Connections within the DB
-    _D(tagName)
-    _D(tagData)
     Osi.DB_GLO_PaladinOathbreaker_SubclassTags(tagName, tagData.OathbreakerTag)
     Osi.DB_GLO_PaladinOathbreaker_SubclassOathBrokenFlags(tagData.OathBrokenEventFlag, tagName)
 
